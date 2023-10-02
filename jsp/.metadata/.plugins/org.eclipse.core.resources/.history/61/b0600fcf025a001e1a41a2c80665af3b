@@ -1,0 +1,93 @@
+package com.coco.market.app.item.dao;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.coco.market.app.category.vo.CategoryVO;
+import com.coco.market.app.category.vo.Sub2CategoryVO;
+import com.coco.market.app.category.vo.SubCategoryVO;
+
+import com.coco.market.app.item.vo.ItemVO;
+import com.mybatis.config.MybatisConfig;
+
+public class ItemDAO {
+public SqlSession sqlSession;
+	
+
+
+	public ItemDAO() {
+		sqlSession = MybatisConfig.getSqlSessionFactory().openSession(true);
+	}
+	
+	public List<ItemVO> selectAll() {
+		return sqlSession.selectList("item.selectAll");
+	}
+	public int select(long itemNumber) {
+		return sqlSession.selectOne("item.selectOne");
+	}
+	public List<CategoryVO> selectAllCat() {
+		return sqlSession.selectList("item.selectCategory");
+	}
+	
+	public List<SubCategoryVO> selectAllSubCat(String bigCategoryName) {
+		return sqlSession.selectList("item.selectSubCategory",bigCategoryName);
+	}
+	public List<Sub2CategoryVO> selectAllSub2Cat(String subCategoryName) {
+		return sqlSession.selectList("item.selectSub2Category",subCategoryName);
+	}
+	
+	
+	 public int insert(ItemVO itemVO) {
+	        return sqlSession.insert("item.insert", itemVO);  // 아이템 생성
+	    }
+
+	 public int insertItemWithTags(ItemVO itemVO, List<String> tags) {
+	        int result = sqlSession.insert("item.insert", itemVO); 
+	        long itemNumber = itemVO.getItemNumber(); 
+
+	        for(String tagName : tags) {
+	            Integer tagId = sqlSession.selectOne("item.selectTag", tagName);
+	            
+	            if(tagId == null) {
+	                sqlSession.insert("item.insertTag", tagName);
+	                tagId = sqlSession.selectOne("item.selectTag", tagName);
+	            }
+	            
+	            Map<String, Object> params = new HashMap<>();
+	            params.put("itemNumber", itemNumber);
+	            params.put("tagNumber", tagId);
+	            sqlSession.insert("item.connectItemWithTag", params);
+	        }
+
+	        return result;
+	    }
+
+    
+    public Integer getTagIdByName(String tagName) {
+        return sqlSession.selectOne("item.getTagIdByName", tagName);
+    }
+
+    public void insertNewTag(String tagName) {
+        sqlSession.insert("item.insertNewTag", tagName);
+    }
+
+    public void connectItemWithTag(int itemNumber, int tagId) {
+        Map<String, Integer> params = new HashMap<>();
+        params.put("itemNumber", itemNumber);
+        params.put("tagId", tagId);
+        sqlSession.insert("item.connectItemWithTag", params);
+    }
+	public int getSequence() {
+		return sqlSession.selectOne("item.getSequence");
+	}
+	
+	 public List<String> getItemFiles(int itemNumber) {
+	        return sqlSession.selectList("item.getItemFiles", itemNumber);  // 아이템 생성
+	    }
+	
+	
+	
+}

@@ -1,0 +1,46 @@
+package com.coco.market.app.item;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.rmi.ServerException;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.coco.market.app.Execute;
+import com.coco.market.app.Result;
+import com.coco.market.app.file.dao.FileDAO;
+import com.coco.market.app.file.vo.FileVO;
+import com.coco.market.app.item.dao.ItemDAO;
+
+
+public class ItemFindFileNameController implements Execute {
+
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		//DB에 저장된 파일 정보를 불러오기
+		Result result = new Result();
+		FileDAO fileDAO = new FileDAO();
+		String fileName = req.getParameter("fileSystemName");
+		FileVO fileRealName = fileDAO.getName(fileName);
+		
+
+		
+		resp.setContentType("image/jpg");
+	    ServletOutputStream bout = resp.getOutputStream();
+	    //파일의 경로
+        String uploadPath = req.getSession().getServletContext().getRealPath("/") + "upload/";
+        String imgpath = uploadPath+fileList.get(0);
+	    FileInputStream f = new FileInputStream(imgpath);
+	    int length;
+	    byte[] buffer = new byte[10];
+	    while((length=f.read(buffer)) != -1){
+	    	bout.write(buffer,0,length);
+	    }
+		return null;
+	}
+
+}

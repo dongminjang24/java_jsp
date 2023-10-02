@@ -1,0 +1,6 @@
+package com.coco.market.app.item.vo;
+
+public class ItemTagDTO {
+	  private Integer itemTagNumber;
+      private String itemTagName;
+}

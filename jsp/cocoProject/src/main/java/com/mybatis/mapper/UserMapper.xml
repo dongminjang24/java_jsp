@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="user">
+
+	
+	<insert id="sign_up" parameterType="UserVO">
+		insert into tbl_user (user_email,user_password,user_nickname,user_address,user_phone_number)
+		values(#{userEmail},#{userPassword},#{userNickname},#{userAddress},#{userPhoneNumber})
+	 </insert>
+	 
+	 
+	<select id="find_email" parameterType="string" resultType="_int">
+		select count(user_number) from tbl_user where user_email = #{userEmail}
+	 </select>
+	 
+	 <select id="signIn" parameterType="map" resultType="_int">
+		select user_number from tbl_user where user_email = #{userEmail} and user_password = #{userPassword}
+	 </select>
+	 
+	 <select id="getUserEmail" parameterType="_int" resultType="string"> 
+		select user_email from tbl_user where user_number =#{userNumber}
+	</select>
+	
+</mapper>

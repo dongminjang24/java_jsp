@@ -1,0 +1,5 @@
+package com.coco.market.app.category.vo;
+
+public class Sub2CategoryVO {
+
+}

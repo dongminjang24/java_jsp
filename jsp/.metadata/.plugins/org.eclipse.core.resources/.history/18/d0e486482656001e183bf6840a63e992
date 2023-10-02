@@ -1,0 +1,5 @@
+package com.coco.market.app.item.vo;
+
+public class ItemTagDTO {
+
+}

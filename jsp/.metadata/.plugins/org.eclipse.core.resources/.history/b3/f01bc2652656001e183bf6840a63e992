@@ -1,0 +1,26 @@
+package com.coco.market.app.item.vo;
+
+public class ItemTagDTO {
+
+	private Integer itemTagNumber;
+	 private String itemTagName;
+
+		
+      public Integer getItemTagNumber() {
+		return itemTagNumber;
+	}
+	public void setItemTagNumber(Integer itemTagNumber) {
+		this.itemTagNumber = itemTagNumber;
+	}
+	public String getItemTagName() {
+		return itemTagName;
+	}
+	public void setItemTagName(String itemTagName) {
+		this.itemTagName = itemTagName;
+	}
+	
+	 @Override
+	public String toString() {
+		return "ItemTagDTO [itemTagNumber=" + itemTagNumber + ", itemTagName=" + itemTagName + "]";
+	}
+}

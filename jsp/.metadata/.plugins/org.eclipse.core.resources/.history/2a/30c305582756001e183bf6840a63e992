@@ -1,0 +1,48 @@
+package com.coco.market.app.item.vo;
+
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.coco.market.app.file.vo.FileVO;
+
+//
+//board_number int unsigned auto_increment primary key,
+//board_title varchar(255),
+//board_content varchar(500),
+//board_date datetime,
+//board_read_count int unsigned,
+//member_number int unsigned,
+//constraint fk_board foreign key(board_number)
+//references tbl_board(board_number)
+
+public class ItemDTO {
+
+
+
+
+	public ItemDTO() {;}
+	private long itemNumber;
+    private String itemName;
+    private String itemAddress;
+    private Boolean itemStatus;
+    private Boolean itemChangeBoolean;
+    private long itemPrice; 
+    private String itemDescription;
+    private LocalDateTime itemCreateTime; 
+    private int userNumber;
+	private int subCategory2Id;
+    private Boolean shippingPrice;
+    private int itemCount;
+    private Boolean protectedPayment;
+	private List<FileVO> files = new ArrayList<FileVO>();
+
+	
+
+	
+
+	
+	
+	
+
+}

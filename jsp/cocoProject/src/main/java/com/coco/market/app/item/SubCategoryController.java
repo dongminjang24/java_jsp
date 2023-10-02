@@ -1,0 +1,43 @@
+package com.coco.market.app.item;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.rmi.ServerException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.coco.market.app.Execute;
+import com.coco.market.app.Result;
+import com.coco.market.app.item.dao.ItemDAO;
+
+
+public class SubCategoryController implements Execute {
+
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+	    resp.setCharacterEncoding("UTF-8");
+        resp.setContentType("application/json");
+		
+		ItemDAO itemDAO = new ItemDAO();
+		
+	     
+        String bigCategoryName = req.getParameter("bigCategoryName");
+        PrintWriter out = resp.getWriter();
+        
+        JSONArray replies = new JSONArray();
+        
+        itemDAO.selectAllSubCat(bigCategoryName).stream()
+               .map(subCat -> new JSONObject(subCat))
+               .forEach(obj -> replies.put(obj));
+        
+        out.print(replies.toString());
+        out.close();
+                
+        return null; // AJAX 호출이므로, 특정 JSP 페이지나 뷰로의 이동은 필요하지 않습니다.
+	}
+
+}

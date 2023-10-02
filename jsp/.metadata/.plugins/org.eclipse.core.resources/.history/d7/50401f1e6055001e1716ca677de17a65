@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="item">
+
+	<!--  item_number bigint unsigned auto_increment primary key,
+ item_name varchar(255),
+ item_address varchar(255),
+ item_status boolean,
+ item_change_boolean boolean,
+ item_price bigint,
+ item_description text,
+ item_create_time DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+ user_number int unsigned ,
+ constraint fk_item foreign key(user_number)
+ references tbl_user(user_number) on delete cascade -->
+ 
+	<select id="selectAll" parameterType="map" resultType="ItemVO">
+		select item_name,item_price,item_create_time from tbl_item
+	</select>
+	
+	<select id="insert" resultType="itemVO">
+		insert into tbl_item(item_name,item_address,item_status,item_change_boolean,item_price,item_description,user_number,sub_category2_id,item_count)
+		values (#{itemName},#{itemAddress},#{itemStatus},#{itemChangeBoolean},#{itemPrice},#{itemDescription},#{userNumber},#{subCategory2Id})
+	</select>
+	
+	<select id="getSequence" resultType="_int">
+		select LAST_INSERT_ID()
+	</select>
+	 
+	<select id="selectCategory" resultType="CategoryVO">
+		select primary_category_id,name from primary_category
+	</select>
+	
+	<select id="selectSubCategory" parameterType="string" resultType="SubCategoryVO">
+	    SELECT sub1.name as name 
+	    FROM sub_category1 sub1
+	    JOIN primary_category pc ON sub1.primary_category_id = pc.primary_category_id
+	    WHERE pc.name = #{bigCategoryName}
+	</select>
+	
+	<select id="selectSub2Category" parameterType="string" resultType="Sub2CategoryVO">
+	    SELECT sub2.name as name 
+	    FROM sub_category2 sub2
+	    JOIN sub_category1 sub1 ON sub2.sub_category1_id = sub1.sub_category1_id
+	    WHERE sub1.name = #{subCategoryName}
+	</select>
+	
+</mapper>

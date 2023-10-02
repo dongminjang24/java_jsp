@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="info">
+	
+	<select id="getSequence" resultType="_int">
+		select LAST_INSERT_ID() 
+	</select>
+	
+	<delete id="delete" parameterType="_int">
+		delete from tbl_info where info_number = #{infoNumber}
+	</delete>
+	
+	<insert id="insert" parameterType="map">
+		insert into tbl_info(info_name,info_age,info_gender)
+		values(#{infoName},#{infoAge},#{infoGender})
+	</insert>
+	
+	<select id="getCount" resultType="_int">
+		select count(info_number) from tbl_info
+	</select>
+</mapper>

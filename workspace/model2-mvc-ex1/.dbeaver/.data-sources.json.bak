@@ -1,0 +1,38 @@
+{
+	"folders": {},
+	"connections": {
+		"oracle_thin-18a1e1ef072-1c779e11103ddd08": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "ORCL",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "1522",
+				"database": "ORCL",
+				"url": "jdbc:oracle:thin:@hidongmin37_high?TNS_ADMIN\u003d/Users/hidongmin37/web_1900_hds/resource/Wallet_hidongmin37",
+				"configurationType": "URL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-connection-type@": "CUSTOM",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"smart-commit": false,
+			"smart-commit-recover": false,
+			"auto-close-transactions": true,
+			"close-transactions-period": 1800
+		}
+	}
+}

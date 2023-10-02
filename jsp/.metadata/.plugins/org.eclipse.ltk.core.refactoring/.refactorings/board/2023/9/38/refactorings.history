@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;DownloadController.java&apos; to &apos;cocoProject/src/main/java/com.coco.market.app.file&apos;&#x0A;- Original project: &apos;board&apos;&#x0A;- Destination element: &apos;cocoProject/src/main/java/com.coco.market.app.file&apos;&#x0A;- Original element: &apos;com.example.app.file.DownloadController.java&apos;" description="Copy compilation unit" destination="=cocoProject/src\/main\/java&lt;com.coco.market.app.file" element1="/src\/main\/java&lt;com.example.app.file{DownloadController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1694954449217" units="1" version="1.0"/>
+</session>

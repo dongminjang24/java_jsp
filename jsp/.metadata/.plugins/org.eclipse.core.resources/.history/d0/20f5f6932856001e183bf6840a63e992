@@ -1,0 +1,67 @@
+package com.coco.market.app.item.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.coco.market.app.category.vo.CategoryVO;
+import com.coco.market.app.category.vo.Sub2CategoryVO;
+import com.coco.market.app.category.vo.SubCategoryVO;
+
+import com.coco.market.app.item.vo.ItemVO;
+import com.mybatis.config.MybatisConfig;
+
+public class ItemDAO {
+public SqlSession sqlSession;
+	
+
+
+	public ItemDAO() {
+		sqlSession = MybatisConfig.getSqlSessionFactory().openSession(true);
+	}
+	
+	public List<ItemVO> selectAll() {
+		return sqlSession.selectList("item.selectAll");
+	}
+	public List<CategoryVO> selectAllCat() {
+		return sqlSession.selectList("item.selectCategory");
+	}
+	
+	public List<SubCategoryVO> selectAllSubCat(String bigCategoryName) {
+		return sqlSession.selectList("item.selectSubCategory",bigCategoryName);
+	}
+	public List<Sub2CategoryVO> selectAllSub2Cat(String subCategoryName) {
+		return sqlSession.selectList("item.selectSub2Category",subCategoryName);
+	}
+	
+	
+
+
+    public int insertItemWithTags(ItemVO itemVO, List<String> tags) {
+        int result = sqlSession.insert("item.insertItem", itemVO); // 아이템 생성
+        int itemNumber = itemVO.getItemNumber(); // 생성된 아이템의 ID를 가져옴
+
+        for(String tagName : tags) {
+            Integer tagId = sqlSession.selectOne("item.selectTag", tagName);
+            
+            if(tagId == null) { // 태그가 없으면 새로 생성
+                sqlSession.insert("item.insertTag", tagName);
+                tagId = sqlSession.selectOne("item.selectTag", tagName);
+            }
+            
+            // 아이템-태그 연결 정보 저장
+            Map<String, Object> params = new HashMap<>();
+            params.put("itemNumber", itemNumber);
+            params.put("tagNumber", tagId);
+            sqlSession.insert("item.connectItemWithTag", params);
+        }
+
+        return result;
+    }
+	public int getSequence() {
+		return sqlSession.selectOne("item.getSequence");
+	}
+	
+	
+	
+}

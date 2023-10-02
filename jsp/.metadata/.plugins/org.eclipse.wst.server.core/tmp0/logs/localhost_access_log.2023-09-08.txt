@@ -1,0 +1,4 @@
+127.0.0.1 - - [08/Sep/2023:10:11:47 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [08/Sep/2023:10:11:47 +0900] "GET /cocoProject/landing.jsp HTTP/1.1" 200 1103
+0:0:0:0:0:0:0:1 - - [08/Sep/2023:10:11:47 +0900] "GET /cocoProject/assets/images/coco_main.png HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [08/Sep/2023:10:11:47 +0900] "GET /favicon.ico HTTP/1.1" 404 818

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <!-- join하면 무조건 DTO필요,DTO를 써야지만,memberId를 받는다. -->
+<mapper namespace="file">
+	<insert id="insert" parameterType="fileVO">
+		insert into tbl_file (file_system_name, file_original_name, item_number) 
+		values (#{fileSystemName}, #{fileOriginalName}, #{itemNumber}) 
+	</insert>
+	<select id="select" parameterType="_int" resultType="fileVO">
+		select file_system_name,file_original_name,item_number from tbl_file
+		where item_number = #{itemNumber}
+	</select>
+	<select id="getName" parameterType="String" resultType="fileVO">
+		select file_system_name,file_original_name,item_number from tbl_file
+		where item_number = #{itemNumber}
+	</select>
+	<delete id="delete" parameterType="_int">
+		delete from tbl_file where item_number = #{itemNumber};
+	</delete>
+</mapper>

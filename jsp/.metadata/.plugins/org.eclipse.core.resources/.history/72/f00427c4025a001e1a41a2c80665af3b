@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="item">
+
+
+ 
+	<select id="selectAll" parameterType="map" resultType="ItemVO">
+		select item_number,item_name,item_address,item_status,item_change_boolean,item_price,item_description,item_create_time,user_number,sub_category2_id,shipping_price,protected_payment,item_count from tbl_item
+	</select>
+	
+	<select id="selectOne" parameterType="_int" resultType="ItemVO">
+		select item_number,item_name,item_address,item_status,item_change_boolean,item_price,item_description,item_create_time,user_number,sub_category2_id,shipping_price,protected_payment,item_count from tbl_item
+		where item_number = #{itemNumber}
+	</select>
+	
+	<insert id="insert">
+	    INSERT INTO tbl_item(item_name, item_address, item_status, item_change_boolean, item_price, item_description, user_number, sub_category2_id, item_count, shipping_price, protected_payment)
+	    VALUES (#{itemName}, #{itemAddress}, #{itemStatus}, #{itemChangeBoolean}, #{itemPrice}, #{itemDescription}, #{userNumber}, #{subCategory2Id}, #{itemCount}, #{shippingPrice}, #{protectedPayment})
+	</insert>
+	<!-- 태그 확인 -->
+	<select id="getTagIdByName" resultType="Integer" parameterType="String">
+	    SELECT item_tag_number
+	    FROM tbl_item_tag
+	    WHERE item_tag_name = #{tagName}
+	</select>
+	<select id="getItemFiles" parameterType="_int" resultType="String">
+	    select file_system_name from tbl_file where item_number = #{itemNumber}
+	</select>
+	<!-- 태그 생성 -->
+	<insert id="insertNewTag" parameterType="String">
+	    INSERT INTO tbl_item_tag (item_tag_name)
+	    VALUES (#{tagName})
+	</insert>
+	
+	<!-- 태그 연결 -->
+	<insert id="connectItemWithTag">
+	    INSERT INTO tbl_tag_relative (item_number, item_tag_number)
+	    VALUES (#{itemNumber}, #{tagId})
+	</insert>
+		
+	<select id="getSequence" resultType="_int">
+		select LAST_INSERT_ID()
+	</select>
+	 
+	<select id="selectCategory" resultType="CategoryVO">
+		select primary_category_id,name from primary_category
+	</select>
+	
+	<select id="selectSubCategory" parameterType="string" resultType="SubCategoryVO">
+	    SELECT sub1.name, sub1.sub_category1_id 
+	    FROM sub_category1 sub1
+	    JOIN primary_category pc ON sub1.primary_category_id = pc.primary_category_id
+	    WHERE pc.name = #{bigCategoryName}
+	</select>
+	
+	<select id="selectSub2Category" parameterType="string" resultType="Sub2CategoryVO">
+	    SELECT sub2.name, sub2.sub_category2_id 
+	    FROM sub_category2 sub2
+	    JOIN sub_category1 sub1 ON sub2.sub_category1_id = sub1.sub_category1_id
+	    WHERE sub1.name = #{subCategoryName}
+	</select>
+	
+</mapper>

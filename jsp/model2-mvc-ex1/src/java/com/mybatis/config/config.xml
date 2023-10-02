@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-config.dtd">
+  
+  <configuration>
+  	<environments default="mysql">
+  		<environment id="mysql">
+  			<transactionManager type="JDBC"/>
+  			<dataSource type="POOLED">
+  				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+ 				<property name="url" value="jdbc:oracle:thin:@hidongmin37_high?TNS_ADMIN=/Users/hidongmin37/web_1900_hds/resource/Wallet_hidongmin37"/>
+ 				<property name="username" value="ADMIN"/>  			
+ 				<property name="password" value="!Hommageynk24"/>
+  			</dataSource>
+  		</environment>
+  	</environments>
+  	<mappers>
+  		<mapper resource="com/mybatis/mapper/InfoMapper.xml"/>
+  		
+  
+  	</mappers>
+  </configuration>

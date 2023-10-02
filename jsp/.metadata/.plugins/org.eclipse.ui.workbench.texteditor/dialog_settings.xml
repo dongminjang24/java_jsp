@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="true"/>
+		<item key="selection" value="carousel-indicators"/>
+		<list key="findhistory">
+			<item value="carousel-indicators"/>
+			<item value="일전"/>
+			<item value="selectAll"/>
+			<item value="판매하기"/>
+			<item value="boardNumber"/>
+			<item value="shipping"/>
+			<item value="tagAdd"/>
+			<item value="uploadPath"/>
+			<item value="selectTag"/>
+			<item value="memberNumber"/>
+			<item value="itemStatus"/>
+			<item value="userNumber"/>
+			<item value="selectSub2Category"/>
+			<item value="querySelector(&quot;div.goods_Scategory_acc&quot;).classList"/>
+			<item value="number"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+			<item value="userVO"/>
+			<item value="&gt;"/>
+			<item value="&lt;"/>
+			<item value="`"/>
+			<item value="replies"/>
+			<item value="boards"/>
+			<item value="board"/>
+			<item value="let"/>
+			<item value="info"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="403"/>
+		<item key="DIALOG_Y_ORIGIN" value="67"/>
+		<item key="DIALOG_WIDTH" value="336"/>
+		<item key="DIALOG_HEIGHT" value="723"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

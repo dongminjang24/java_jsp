@@ -1,0 +1,10 @@
+package com.coco.market.app.category.vo;
+
+public class Sub2CategoryVO {
+	public Sub2CategoryVO() {;}
+    
+	private int subCategory1Id;
+	private int primaryCategoryId;
+	private String name;
+	
+}

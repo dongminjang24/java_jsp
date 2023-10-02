@@ -1,0 +1,9 @@
+package com.coco.market.app.item;
+
+public class Snippet {
+	public static void main(String[] args) {
+		req.setAttribute("itemImages", fileList);  // <-- 요청 속성으로 파일 리스트 설정
+		
+	}
+}
+

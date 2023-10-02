@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="join">
+
+	<insert id="insert" parameterType="map">
+		insert into tbl_mvc_member(member_id,member_password1,member_password2,member_email,member_phone_number,member_hobby,member_job,member_age,member_info)
+		values(#{member_id},#{member_password1},#{member_password2},#{member_email},#{member_phone_number},#{member_hobby},#{member_job},#{member_age},#{member_info})
+	</insert>
+	
+
+</mapper>

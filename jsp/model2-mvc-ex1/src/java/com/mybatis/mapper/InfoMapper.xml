@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="info">
+	<insert id="insert" parameterType="map">
+		insert into tbl_info(info_name,info_age,info_gender)
+		values(#{infoName},#{infoAge},#{infoGender})
+	</insert>
+	
+	<select id="getSequence" resultType="_int">
+		select LAST_INSERT_ID()
+	</select>
+	
+	<select id="selectInfo" parameterType="_int" resultType="map">
+		select info_name, info_age, info_gender from tbl_info
+		where info_number = #{infoNumber}
+	</select>
+</mapper>

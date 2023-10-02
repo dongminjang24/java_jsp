@@ -1,0 +1,12 @@
+hidongmin37_high = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gbf56f1ae8d9233_hidongmin37_high.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+hidongmin37_low = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gbf56f1ae8d9233_hidongmin37_low.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+hidongmin37_medium = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gbf56f1ae8d9233_hidongmin37_medium.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+hidongmin37_tp = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gbf56f1ae8d9233_hidongmin37_tp.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+hidongmin37_tpurgent = (description= (retry_count=20)(retry_delay=3)(address=(protocol=tcps)(port=1522)(host=adb.ap-chuncheon-1.oraclecloud.com))(connect_data=(service_name=gbf56f1ae8d9233_hidongmin37_tpurgent.adb.oraclecloud.com))(security=(ssl_server_dn_match=yes)))
+
+
+

@@ -1,0 +1,44 @@
+package com.coco.market.app.item;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.rmi.ServerException;
+import java.util.Map;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.coco.market.app.Execute;
+import com.coco.market.app.Result;
+import com.coco.market.app.file.dao.FileDAO;
+import com.coco.market.app.item.dao.ItemDAO;
+
+
+public class ItemFindFileController implements Execute {
+
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+		//DB에 저장된 파일 정보를 불러오기
+		Result result = new Result();
+		int boardNumber = Integer.valueOf(req.getParameter("itemNumber"));
+		ItemDAO itemDAO = new ItemDAO();
+		FileDAO fileDAO = new FileDAO();
+		
+//		itemDAO.setFiles(fileDAO.select(boardNumber));
+//		req.setAttribute("board", boardDTO);
+		
+		resp.setContentType("image/jpg");
+	    ServletOutputStream bout = resp.getOutputStream();
+	    //파일의 경로
+	    String imgpath = map.get("path")+ File.separator+result.get("fileName");
+	    FileInputStream f = new FileInputStream(imgpath);
+	    int length;
+	    byte[] buffer = new byte[10];
+	    while((length=f.read(buffer)) != -1){
+	    	bout.write(buffer,0,length);
+	    }
+		return null;
+	}
+
+}

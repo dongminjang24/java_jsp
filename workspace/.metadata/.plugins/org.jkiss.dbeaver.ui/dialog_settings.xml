@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="DBeaver.DriverTabbedViewer">
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
+		<item key="DIALOG_X_ORIGIN" value="-45"/>
+		<item key="DIALOG_Y_ORIGIN" value="68"/>
+		<item key="DIALOG_WIDTH" value="898"/>
+		<item key="DIALOG_HEIGHT" value="676"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.ActiveWizardDialog.ProjectCreateWizard">
+		<item key="DIALOG_X_ORIGIN" value="217"/>
+		<item key="DIALOG_Y_ORIGIN" value="16"/>
+		<item key="DIALOG_WIDTH" value="679"/>
+		<item key="DIALOG_HEIGHT" value="602"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DriverDownload">
+	</section>
+	<section name="DBeaver.DriverDownloadDialog">
+		<item key="DIALOG_X_ORIGIN" value="-34"/>
+		<item key="DIALOG_Y_ORIGIN" value="-68"/>
+		<item key="DIALOG_WIDTH" value="679"/>
+		<item key="DIALOG_HEIGHT" value="577"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.StandardErrorDialog">
+		<item key="showDetails" value="true"/>
+		<item key="DIALOG_X_ORIGIN" value="25"/>
+		<item key="DIALOG_Y_ORIGIN" value="35"/>
+		<item key="DIALOG_WIDTH" value="765"/>
+		<item key="DIALOG_HEIGHT" value="403"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.QM.LogViewer">
+	</section>
+	<section name="ResultSetViewer">
+		<section name="presentations">
+			<section name="spreadsheet">
+				<item key="enabledPanelIds" value="value-view"/>
+				<item key="activePanelId" value="value-view"/>
+				<item key="panelRatio" value="300"/>
+				<item key="panelsVisible" value="true"/>
+				<item key="verticalLayout" value="false"/>
+			</section>
+		</section>
+		<section name="ErrorPresentation">
+		</section>
+	</section>
+	<section name="DBeaver.ShowTipOfTheDayDialog">
+		<item key="DIALOG_X_ORIGIN" value="287"/>
+		<item key="DIALOG_Y_ORIGIN" value="250"/>
+		<item key="DIALOG_WIDTH" value="398"/>
+		<item key="DIALOG_HEIGHT" value="251"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.SelectDataSourceDialog">
+		<item key="DIALOG_X_ORIGIN" value="493"/>
+		<item key="DIALOG_Y_ORIGIN" value="0"/>
+		<item key="DIALOG_WIDTH" value="296"/>
+		<item key="DIALOG_HEIGHT" value="691"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.TransactionLogDialog">
+		<item key="DIALOG_X_ORIGIN" value="-185"/>
+		<item key="DIALOG_Y_ORIGIN" value="212"/>
+		<item key="DIALOG_WIDTH" value="965"/>
+		<item key="DIALOG_HEIGHT" value="308"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.ScriptSelectorPopup">
+		<item key="DIALOG_X_ORIGIN" value="370"/>
+		<item key="DIALOG_Y_ORIGIN" value="185"/>
+		<item key="DIALOG_WIDTH" value="543"/>
+		<item key="DIALOG_HEIGHT" value="349"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.ViewSQLDialog">
+		<item key="DIALOG_X_ORIGIN" value="298"/>
+		<item key="DIALOG_Y_ORIGIN" value="144"/>
+		<item key="DIALOG_WIDTH" value="528"/>
+		<item key="DIALOG_HEIGHT" value="516"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+		<item key="GenerateSQL.useFQNames" value="false"/>
+	</section>
+	<section name="DBeaver.EditConnectionDialog">
+		<item key="DIALOG_X_ORIGIN" value="-143"/>
+		<item key="DIALOG_Y_ORIGIN" value="120"/>
+		<item key="DIALOG_WIDTH" value="700"/>
+		<item key="DIALOG_HEIGHT" value="650"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+	<section name="DBeaver.DriverManagerDialog">
+		<item key="DIALOG_X_ORIGIN" value="219"/>
+		<item key="DIALOG_Y_ORIGIN" value="148"/>
+		<item key="DIALOG_WIDTH" value="639"/>
+		<item key="DIALOG_HEIGHT" value="536"/>
+		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
+	</section>
+</section>

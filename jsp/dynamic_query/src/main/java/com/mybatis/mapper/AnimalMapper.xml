@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="animal">
+	<select id="find" parameterType="criteria" resultType= "animalVO">
+		select animal_number, animal_name, animal_species, animal_life, animal_detail from tbl_animal 
+		<where>
+			<trim prefixOverrides="or">
+				<if test="type != 'none'.toString() and keyword != 'none'.toString()">
+					<foreach item="type" collection="types">
+						<trim prefix="or">
+							<choose>
+								<when test="type == 'n'.toString()">
+									 animal_name like concat('%',#{keyword},'%')
+								</when>
+								<when test="type == 's'.toString()">
+									 animal_species like concat('%',#{keyword},'%')
+								</when>
+								<when test="type == 'l'.toString()">
+									 animal_life like concat('%',#{keyword},'%')
+								</when>
+							</choose>
+						</trim>
+					</foreach> 	
+				</if>
+			</trim>
+		</where>
+		<if test="order != 'none'.toString()">
+			order by
+			<choose>
+				<when test="order == 'none'.toString()">
+					animal_number
+				</when>
+				<when test="order == 'n'.toString()">
+					animal_name
+				</when>
+				<when test="order == 's'.toString()">
+					animal_species
+				</when>
+				<when test="order == 'l'.toString()">
+					animal_life
+				</when>
+			</choose>
+			desc
+		</if>
+		
+	
+</select>
+	
+	
+	
+</mapper>
+
+	<!--
+		앞에 뭐가 붙을 수 있으므로 or로 하고,
+		types만 써줘도 myBatis는 getter와 setter를 해주므로 알아서 찾아옴.
+		
+		 where animal_name = #{keyword}
+		where animal species £ #{keyword}
+		where animal_life = #{keyword}
+		where animal_name = #{keyword} or animal_species = #{keyword}
+		where animal_name = #{keyword} or animal_life = #{keyword}
+		where animal_ species = #{keyword} or animal_ life = #{keyword}
+		where animal_name = #{keyword} or animal_species = #{keyword} or animal_life = #{keyword} -->
+
+
+
+
+
+

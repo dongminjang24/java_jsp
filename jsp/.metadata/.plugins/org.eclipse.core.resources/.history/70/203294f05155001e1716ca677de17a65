@@ -1,0 +1,43 @@
+package com.coco.market.app.item.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import com.coco.market.app.category.vo.CategoryVO;
+import com.coco.market.app.category.vo.SubCategoryVO;
+
+import com.coco.market.app.item.vo.ItemVO;
+import com.mybatis.config.MybatisConfig;
+
+public class ItemDAO {
+public SqlSession sqlSession;
+	
+
+
+	public ItemDAO() {
+		sqlSession = MybatisConfig.getSqlSessionFactory().openSession(true);
+	}
+	
+	public List<ItemVO> selectAll() {
+		return sqlSession.selectList("item.selectAll");
+	}
+	public List<CategoryVO> selectAllCat() {
+		return sqlSession.selectList("item.selectCategory");
+	}
+	
+	public List<SubCategoryVO> selectAllSubCat(String bigCategoryName) {
+		return sqlSession.selectList("item.selectSubCategory",bigCategoryName);
+	}
+	
+	
+
+	public void insert(ItemVO itemVO) {
+		sqlSession.insert("item.insert",itemVO);
+	}
+	
+	public int getSequence() {
+		return sqlSession.selectOne("item.getSequence");
+	}
+	
+}

@@ -1,0 +1,35 @@
+package com.coco.market.app.item;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.rmi.ServerException;
+import java.util.List;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.coco.market.app.Execute;
+import com.coco.market.app.Result;
+import com.coco.market.app.item.dao.ItemDAO;
+import com.coco.market.app.item.vo.ItemVO;
+
+
+public class ItemDetailController implements Execute {
+
+	@Override
+	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServerException {
+
+		Result result = new Result();
+		String itemNumberStr = req.getParameter("itemNumber");
+		long itemNumber = Long.valueOf(itemNumberStr);  
+		ItemDAO itemDAO = new ItemDAO();
+		ItemVO itemVO = itemDAO.select(itemNumber);
+		
+		req.setAttribute("item", itemVO);
+		
+		result.setPath("/app/item/detail.jsp");
+		return result;		
+	}
+
+}
