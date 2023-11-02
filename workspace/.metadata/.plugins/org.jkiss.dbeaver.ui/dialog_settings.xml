@@ -4,8 +4,8 @@
 		<item key="folder" value="sql"/>
 	</section>
 	<section name="DBeaver.ActiveWizardDialog.NewConnectionWizard">
-		<item key="DIALOG_X_ORIGIN" value="-45"/>
-		<item key="DIALOG_Y_ORIGIN" value="68"/>
+		<item key="DIALOG_X_ORIGIN" value="346"/>
+		<item key="DIALOG_Y_ORIGIN" value="73"/>
 		<item key="DIALOG_WIDTH" value="898"/>
 		<item key="DIALOG_HEIGHT" value="676"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>
@@ -86,8 +86,8 @@
 		<item key="GenerateSQL.useFQNames" value="false"/>
 	</section>
 	<section name="DBeaver.EditConnectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="-143"/>
-		<item key="DIALOG_Y_ORIGIN" value="120"/>
+		<item key="DIALOG_X_ORIGIN" value="131"/>
+		<item key="DIALOG_Y_ORIGIN" value="-74"/>
 		<item key="DIALOG_WIDTH" value="700"/>
 		<item key="DIALOG_HEIGHT" value="650"/>
 		<item key="DIALOG_FONT_NAME" value="1|.AppleSystemUIFont|13.0|0|COCOA|1|.AppleSystemUIFont"/>

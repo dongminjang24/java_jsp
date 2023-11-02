@@ -13,20 +13,21 @@
 			<library type="jar" path="maven:/com.oracle.database.nls:orai18n:RELEASE" custom="false" disabled="true" version="12.2.0.1"/>
 			<library type="jar" path="maven:/com.oracle.database.xml:xdb6:RELEASE" custom="false" disabled="true" version="12.2.0.1"/>
 			<library type="jar" path="maven:/com.oracle.database.xml:xmlparserv2:RELEASE" custom="false" disabled="true" version="12.2.0.1"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/dms.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/ojdbc10_g.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/ojdbc10.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/ojdbc10dms_g.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/ojdbc10dms.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/oraclepki.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/orai18n.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/osdt_cert.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/osdt_core.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/simplefan.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/ucp.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/xdb.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/xmlparserv2_sans_jaxp_services.jar" custom="true"/>
-			<library type="jar" path="${home}/web_1900_hds/resource/ojdbc10-full/xmlparserv2.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/dms.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ojdbc8_g.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ojdbc8.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ojdbc8dms_g.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ojdbc8dms.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ons.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/oraclepki.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/orai18n.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/osdt_cert.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/osdt_core.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/simplefan.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/ucp.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/xdb.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/xmlparserv2_sans_jaxp_services.jar" custom="true"/>
+			<library type="jar" path="${home}/Downloads/ojdbc8-full/xmlparserv2.jar" custom="true"/>
 		</driver>
 	</provider>
 </drivers>

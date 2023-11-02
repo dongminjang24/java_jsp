@@ -6550,3 +6550,423 @@ Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_b
 	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:72)
 	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-11-02 22:33:40.343 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -keyring /Users/hidongmin37/.eclipse_keyring -eclipse.keyring /Users/hidongmin37/Library/DBeaverData/secure/secure_storage
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/hidongmin37/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-11-02 22:33:42.818
+!MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 22:33:53.091
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 22:33:53.091
+!MESSAGE Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:457)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1100)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:549)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:265)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:651)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:266)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:87)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:966)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1209)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3667)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1422)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3779)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1077)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMetaContext(JDBCRemoteInstance.java:137)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initialize(JDBCDataSource.java:495)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initialize(OracleDataSource.java:499)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1287)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.runSync(ConnectJob.java:104)
+	at org.jkiss.dbeaver.ui.actions.datasource.DataSourceHandler.connectToDataSource(DataSourceHandler.java:115)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.initConnection(UIServiceConnectionsImpl.java:87)
+	at org.jkiss.dbeaver.model.DBUtils.initDataSource(DBUtils.java:2535)
+	at org.jkiss.dbeaver.model.navigator.DBNDataSource.initializeNode(DBNDataSource.java:151)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:225)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:1)
+	at org.jkiss.dbeaver.model.navigator.DBNUtils.getNodeChildrenFiltered(DBNUtils.java:91)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:49)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:72)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 22:37:53.535
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 22:37:53.535
+!MESSAGE Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:457)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1100)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:549)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:265)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:651)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:266)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:87)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:966)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1209)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3667)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1422)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3779)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1077)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 22:38:06.911
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 22:38:06.911
+!MESSAGE Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:509)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:457)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1100)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:549)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:265)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:651)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:266)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:87)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:966)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1209)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3667)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1422)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3779)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1077)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMetaContext(JDBCRemoteInstance.java:137)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initialize(JDBCDataSource.java:495)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initialize(OracleDataSource.java:499)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1287)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2023-11-02 22:49:45.444
+!MESSAGE SSO KeyStore not available
+!STACK 0
+java.security.NoSuchAlgorithmException: SSO KeyStore not available
+	at java.base/sun.security.jca.GetInstance.getInstance(Unknown Source)
+	at java.base/java.security.Security.getImpl(Unknown Source)
+	at java.base/java.security.KeyStore.getInstance(Unknown Source)
+	at oracle.net.nt.CustomSSLSocketFactory.getKeyStoreInstance(CustomSSLSocketFactory.java:984)
+	at oracle.net.nt.CustomSSLSocketFactory.loadKeyStore(CustomSSLSocketFactory.java:1122)
+	at oracle.net.nt.CustomSSLSocketFactory.createSSLContext(CustomSSLSocketFactory.java:376)
+	at oracle.net.nt.CustomSSLSocketFactory.getSSLContext(CustomSSLSocketFactory.java:358)
+	at oracle.net.nt.CustomSSLSocketFactory.getSSLContext(CustomSSLSocketFactory.java:326)
+	at oracle.net.nt.TcpsNTAdapter.newSSLEngine(TcpsNTAdapter.java:624)
+	at oracle.net.nt.TcpsNTAdapter.connect(TcpsNTAdapter.java:210)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:195)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:653)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:586)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:729)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:340)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1706)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:631)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:820)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:80)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:820)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:624)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.lambda$1(JDBCDataSource.java:246)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.lambda$0(JDBCDataSource.java:259)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.openConnection(JDBCDataSource.java:278)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.openConnection(OracleDataSource.java:176)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:103)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 22:51:17.427
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 22:51:17.427
+!MESSAGE ORA-01031: 권한이 불충분합니다
+
+https://docs.oracle.com/error-help/db/ora-01031/
+!SUBENTRY 2 org.jkiss.dbeaver.model 2 0 2023-11-02 22:51:17.427
+!MESSAGE Error : 1031, Position : 0, SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Original SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Message = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Original SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Message = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1330)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1102)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:456)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:272)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1451)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1958)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1594)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3754)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:4202)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1015)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-11-02 23:21:34.409 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -keyring /Users/hidongmin37/.eclipse_keyring -eclipse.keyring /Users/hidongmin37/Library/DBeaverData/secure/secure_storage
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/hidongmin37/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-11-02 23:21:36.606
+!MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 23:21:46.116
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 23:21:46.116
+!MESSAGE ORA-01031: 권한이 불충분합니다
+
+https://docs.oracle.com/error-help/db/ora-01031/
+!SUBENTRY 2 org.jkiss.dbeaver.model 2 0 2023-11-02 23:21:46.116
+!MESSAGE Error : 1031, Position : 0, SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Original SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Message = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Original SQL = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Message = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:710)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:608)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1330)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:1102)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:456)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:498)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:272)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:1451)
+	at oracle.jdbc.driver.OracleStatement.executeSQLStatement(OracleStatement.java:1958)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1594)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3754)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:4202)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1015)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMetaContext(JDBCRemoteInstance.java:137)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initialize(JDBCDataSource.java:495)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initialize(OracleDataSource.java:499)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1287)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.runSync(ConnectJob.java:104)
+	at org.jkiss.dbeaver.ui.actions.datasource.DataSourceHandler.connectToDataSource(DataSourceHandler.java:115)
+	at org.jkiss.dbeaver.ui.actions.datasource.UIServiceConnectionsImpl.initConnection(UIServiceConnectionsImpl.java:87)
+	at org.jkiss.dbeaver.model.DBUtils.initDataSource(DBUtils.java:2535)
+	at org.jkiss.dbeaver.model.navigator.DBNDataSource.initializeNode(DBNDataSource.java:151)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:225)
+	at org.jkiss.dbeaver.model.navigator.DBNDatabaseNode.getChildren(DBNDatabaseNode.java:1)
+	at org.jkiss.dbeaver.model.navigator.DBNUtils.getNodeChildrenFiltered(DBNUtils.java:91)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:49)
+	at org.jkiss.dbeaver.ui.navigator.database.load.TreeLoadService.evaluate(TreeLoadService.java:1)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:88)
+	at org.jkiss.dbeaver.ui.LoadingJob.run(LoadingJob.java:72)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SESSION 2023-11-02 23:35:58.626 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=macosx, ARCH=aarch64, WS=cocoa, NL=ko_KR
+Framework arguments:  -keyring /Users/hidongmin37/.eclipse_keyring -eclipse.keyring /Users/hidongmin37/Library/DBeaverData/secure/secure_storage
+Command-line arguments:  -os macosx -ws cocoa -arch aarch64 -keyring /Users/hidongmin37/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 2 2023-11-02 23:36:01.558
+!MESSAGE Invalid preference category path: org.eclipse.debug.ui.ConsolePreferencePage (bundle: org.eclipse.ui.console, page: org.eclipse.ui.internal.console.ansi.preferences.AnsiConsolePreferencePage)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 23:37:06.455
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 23:37:06.455
+!MESSAGE Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:526)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:458)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1100)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:549)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:265)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:651)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:266)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:87)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:966)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1209)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3667)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1422)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3779)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1077)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 4 0 2023-11-02 23:48:50.920
+!MESSAGE Connection refused
+!STACK 0
+java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.Net.connect0(Native Method)
+	at java.base/sun.nio.ch.Net.connect(Unknown Source)
+	at java.base/sun.nio.ch.Net.connect(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(Unknown Source)
+	at java.base/java.nio.channels.SocketChannel.open(Unknown Source)
+	at oracle.net.nt.TimeoutSocketChannel.connect(TimeoutSocketChannel.java:105)
+	at oracle.net.nt.TimeoutSocketChannel.<init>(TimeoutSocketChannel.java:91)
+	at oracle.net.nt.TcpNTAdapter.connect(TcpNTAdapter.java:207)
+	at oracle.net.nt.ConnOption.connect(ConnOption.java:191)
+	at oracle.net.nt.ConnStrategy.execute(ConnStrategy.java:649)
+	at oracle.net.resolver.AddrResolution.resolveAndExecute(AddrResolution.java:582)
+	at oracle.net.ns.NSProtocol.establishConnection(NSProtocol.java:725)
+	at oracle.net.ns.NSProtocol.connect(NSProtocol.java:336)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:1698)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:623)
+	at oracle.jdbc.driver.PhysicalConnection.connect(PhysicalConnection.java:816)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:76)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:816)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:620)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.lambda$1(JDBCDataSource.java:246)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.lambda$0(JDBCDataSource.java:259)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.openConnection(JDBCDataSource.java:278)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.openConnection(OracleDataSource.java:176)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:103)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.jkiss.dbeaver.model 2 0 2023-11-02 23:48:55.093
+!MESSAGE Can't set session optimizer parameters
+!SUBENTRY 1 org.jkiss.dbeaver.model 2 0 2023-11-02 23:48:55.093
+!MESSAGE Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+!STACK 0
+Error : 1031, Position : 0, Sql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, OriginalSql = ALTER SESSION SET "_optimizer_push_pred_cost_based" = FALSE, Error Msg = ORA-01031: 권한이 불충분합니다
+
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:526)
+	at oracle.jdbc.driver.T4CTTIoer11.processError(T4CTTIoer11.java:458)
+	at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:1100)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:549)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:265)
+	at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:651)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:266)
+	at oracle.jdbc.driver.T4CPreparedStatement.doOall8(T4CPreparedStatement.java:87)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeForRows(T4CPreparedStatement.java:966)
+	at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1209)
+	at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3667)
+	at oracle.jdbc.driver.T4CPreparedStatement.executeInternal(T4CPreparedStatement.java:1422)
+	at oracle.jdbc.driver.OraclePreparedStatement.execute(OraclePreparedStatement.java:3779)
+	at oracle.jdbc.driver.OraclePreparedStatementWrapper.execute(OraclePreparedStatementWrapper.java:1077)
+	at org.jkiss.dbeaver.model.impl.jdbc.exec.JDBCPreparedStatementImpl.execute(JDBCPreparedStatementImpl.java:261)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCUtils.executeSQL(JDBCUtils.java:569)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.initializeContextState(OracleDataSource.java:336)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCExecutionContext.connect(JDBCExecutionContext.java:162)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.initializeMainContext(JDBCRemoteInstance.java:102)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCRemoteInstance.<init>(JDBCRemoteInstance.java:61)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.initializeRemoteInstance(JDBCDataSource.java:123)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:107)
+	at org.jkiss.dbeaver.model.impl.jdbc.JDBCDataSource.<init>(JDBCDataSource.java:98)
+	at org.jkiss.dbeaver.ext.oracle.model.OracleDataSource.<init>(OracleDataSource.java:94)
+	at org.jkiss.dbeaver.ext.oracle.OracleDataSourceProvider.openDataSource(OracleDataSourceProvider.java:143)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.openDataSource(DataSourceDescriptor.java:1280)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect0(DataSourceDescriptor.java:1117)
+	at org.jkiss.dbeaver.registry.DataSourceDescriptor.connect(DataSourceDescriptor.java:950)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectJob.run(ConnectJob.java:77)
+	at org.jkiss.dbeaver.runtime.jobs.ConnectionTestJob.run(ConnectionTestJob.java:103)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
