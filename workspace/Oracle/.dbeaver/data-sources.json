@@ -19,6 +19,25 @@
 				},
 				"auth-model": "oracle_native"
 			}
+		},
+		"oracle_thin-18b90101d82-5b7949d618a988c3": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "ORCL 2",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "1522",
+				"database": "ORCL",
+				"url": "jdbc:oracle:thin:@javaDm_medium?TNS_ADMIN\u003d/Users/hidongmin37/web_1900_hds/resource/Wallet_javaDm",
+				"configurationType": "URL",
+				"type": "dev",
+				"provider-properties": {
+					"@dbeaver-connection-type@": "CUSTOM",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			}
 		}
 	},
 	"connection-types": {
