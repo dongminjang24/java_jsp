@@ -5,5 +5,5 @@ org.jkiss.dbeaver.core.confirm.exit=always
 project.active=cocoMarket
 sample.database.canceled=true
 tipOfTheDayInitializer.notFirstRun=true
-ui.auto.update.check.time=1698994805170
+ui.auto.update.check.time=1700924702285
 ui.show.tip.of.the.day.on.startup=true

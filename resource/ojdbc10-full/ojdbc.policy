@@ -34,6 +34,7 @@ grant codeBase "file:${oracle.jdbc.policy.JDBC_CODE_BASE}" {
   permission java.lang.management.ManagementPermission "control";
   permission javax.management.MBeanServerPermission "createMBeanServer";
   permission javax.management.MBeanPermission "oracle.jdbc.driver.OracleDiagnosabilityMBean#[com.oracle.jdbc:type=diagnosability,*]", "registerMBean";
+  permission javax.management.MBeanPermission "oracle.jdbc.replay.driver.ReplayStatisticsMBeanImpl#[com.oracle.jdbc:type=ReplayStatistics,*]", "registerMBean";
   permission javax.management.MBeanTrustPermission "register";
   permission java.lang.RuntimePermission "getenv.TNS_ADMIN";
   permission java.util.PropertyPermission "TNS_ADMIN", "read";

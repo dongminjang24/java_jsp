@@ -13,6 +13,12 @@
 				"configurationType": "MANUAL",
 				"home": "/usr/local/mysql-8.0.33-macos13-arm64",
 				"type": "dev",
+				"properties": {
+					"connectTimeout": "20000",
+					"rewriteBatchedStatements": "true",
+					"enabledTLSProtocols": "TLSv1,TLSv1.1,TLSv1.2",
+					"allowPublicKeyRetrieval": "true"
+				},
 				"auth-model": "native"
 			}
 		}

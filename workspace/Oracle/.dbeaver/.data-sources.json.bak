@@ -1,16 +1,16 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-189ac741c60-2701940b2411e767": {
+		"oracle_thin-18b90101d82-5b7949d618a988c3": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
 			"name": "ORCL",
 			"save-password": true,
 			"configuration": {
 				"host": "localhost",
-				"port": "1521",
+				"port": "1522",
 				"database": "ORCL",
-				"url": "jdbc:oracle:thin:@hidongmin37_high?TNS_ADMIN\u003d/Users/hidongmin37/web_1900_hds/resource/Wallet_hidongmin37",
+				"url": "jdbc:oracle:thin:@javaDm_medium?TNS_ADMIN\u003d/Users/hidongmin37/web_1900_hds/resource/Wallet_javaDm",
 				"configurationType": "URL",
 				"type": "dev",
 				"provider-properties": {

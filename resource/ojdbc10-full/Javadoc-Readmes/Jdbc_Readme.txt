@@ -1,24 +1,24 @@
-Oracle JDBC Driver patch release 19.19.0.0 Readme.txt
+Oracle JDBC Driver patch release 19.21.0.0 Readme.txt
 ======================================================
 
 Driver Versions
 ---------------
 
-These are the driver versions in the 19.19.0.0 release:
+These are the driver versions in the 19.21.0.0 release:
 
-  - JDBC Thin Driver 19.19.0.0
+  - JDBC Thin Driver 19.21.0.0
     100% Java client-side JDBC driver for use in client applications,
     middle-tier servers and applets.
 
-  - JDBC OCI Driver 19.19.0.0
-    Client-side JDBC driver for use on a machine where OCI 19.19.0.0
+  - JDBC OCI Driver 19.21.0.0
+    Client-side JDBC driver for use on a machine where OCI 19.21.0.0
     is installed.
 
-  - JDBC Thin Server-side Driver 19.19.0.0
+  - JDBC Thin Server-side Driver 19.21.0.0
     JDBC driver for use in Java program in the database to access
     remote Oracle databases.
 
-  - JDBC Server-side Internal Driver 19.19.0.0
+  - JDBC Server-side Internal Driver 19.21.0.0
     Server-side JDBC driver for use by Java Stored procedures.  This
     driver used to be called the "JDBC Kprb Driver".
 
@@ -150,7 +150,7 @@ the [ORACLE_HOME]/jdbc directory.
 Setting Up Your Environment
 ---------------------------
 
-In order to use the JDBC Thin Driver 19.19.0.0, please add ojdbc8.jar or
+In order to use the JDBC Thin Driver 19.21.0.0, please add ojdbc8.jar or
 ojdbc10.jar to your CLASSPATH.
 
 You may also add the following jars:
