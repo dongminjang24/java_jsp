@@ -1,0 +1,71 @@
+2023-11-26 00:04:57.448 - DBeaver 23.2.3.202310221533 is starting
+2023-11-26 00:04:57.449 - OS: Mac OS X 14.1.1 (aarch64)
+2023-11-26 00:04:57.449 - Java version: 17.0.6 by Eclipse Adoptium (64bit)
+2023-11-26 00:04:57.449 - Install path: '/Applications/DBeaver.app/Contents/Eclipse'
+2023-11-26 00:04:57.449 - Instance path: 'file:/Users/hidongmin37/web_1900_hds/workspace/'
+2023-11-26 00:04:57.449 - Memory available 70Mb/1024Mb
+2023-11-26 00:04:57.453 - Create display
+2023-11-26 00:04:57.540 - Initializing DBeaver 23.2.3
+2023-11-26 00:04:57.540 - Host plugin: org.jkiss.dbeaver.ui.app.standalone 23.2.3.202310221533
+2023-11-26 00:04:57.540 - Initialize desktop platform...
+2023-11-26 00:04:57.604 - BounceCastle bundle found. Use JCE provider BC
+> Start Core File Systems [org.eclipse.core.filesystem 1.10.100.v20230717-1727]
+> Start Core Resource Management [org.eclipse.core.resources 3.19.100.v20230814-1312]
+> Start 팀 지원 핵심 [org.eclipse.team.core 3.10.100.v20230726-0617]
+> Start DBeaver UI Navigator [org.jkiss.dbeaver.ui.navigator 1.0.117.202310221533]
+2023-11-26 00:04:57.705 - Initialize base platform...
+2023-11-26 00:04:57.715 - Platform initialized (175ms)
+> Start DBeaver UI Editors - Base [org.jkiss.dbeaver.ui.editors.base 1.0.117.202310221533]
+2023-11-26 00:04:57.814 - Error accessing instance server: java.net.ConnectException
+2023-11-26 00:04:57.822 - Starting instance server at http://localhost:50173
+2023-11-26 00:04:57.826 - Run workbench
+> Start DBeaver UI [org.jkiss.dbeaver.ui 5.1.132.202310221533]
+> Start Eclipse e4 작업영역 SWT [org.eclipse.e4.ui.workbench.swt 0.17.100.v20230727-0604]
+> Start Eclipse Application Services [org.eclipse.e4.core.services 2.4.100.v20230708-0809]
+> Start Eclipse UI Application Services [org.eclipse.e4.ui.services 1.6.100.v20230630-1554]
+> Start Eclipse e4 Progress View [org.eclipse.e4.ui.progress 0.4.100.v20230727-0604]
+> Start Eclipse Bindings Support [org.eclipse.e4.ui.bindings 0.14.100.v20230630-1554]
+> Start Eclipse e4 core commands [org.eclipse.e4.core.commands 1.1.100.v20230630-1554]
+> Start EMF XML/XMI Persistence [org.eclipse.emf.ecore.xmi 2.35.0.v20230801-1141]
+> Start Eclipse e4 작업영역 기능 추가 [org.eclipse.e4.ui.workbench.addons.swt 1.5.100.v20230727-0604]
+> Start Eclipse e4 작업영역 SWT 렌더러 [org.eclipse.e4.ui.workbench.renderers.swt 0.16.100.v20230801-1255]
+> Start Eclipse Dependency Injection Extensions [org.eclipse.e4.core.di.extensions 0.18.0.v20230429-1914]
+> Start Eclipse CSS SWT Support [org.eclipse.e4.ui.css.swt 0.15.100.v20230727-0604]
+Warning: NLS unused message: BlockedJobsDialog_UserInterfaceTreeElement in: org.eclipse.ui.internal.progress.messages
+> Start Eclipse CSS SWT Theme Support [org.eclipse.e4.ui.css.swt.theme 0.14.100.v20230727-0604]
+2023-11-26 00:04:58.703 - Configure workbench window
+> Start DBeaver SQL Model [org.jkiss.dbeaver.model.sql 1.0.107.202310221533]
+2023-11-26 00:04:58.762 - Total database drivers: 107 (107)
+> Start 도움말 시스템 코어 [org.eclipse.help 3.10.100.v20230726-0617]
+2023-11-26 00:04:58.797 - Create actions
+2023-11-26 00:04:58.800 - Disable Eclipse action set 'org.eclipse.ui.edit.text.actionSet.annotationNavigation'
+2023-11-26 00:04:58.800 - Disable Eclipse action set 'org.eclipse.ui.WorkingSetActionSet'
+2023-11-26 00:04:58.800 - Disable Eclipse action set 'org.eclipse.ui.actionSet.openFiles'
+2023-11-26 00:04:58.966 - Initialize workbench window
+2023-11-26 00:04:58.971 - Finish initialization
+> Start 기본 문서 편집기 [org.eclipse.ui.editors 3.17.0.v20230821-1342]
+> Start 텍스트 편집기 프레임워크 [org.eclipse.ui.workbench.texteditor 3.17.100.v20230821-0745]
+Warning: NLS unused message: actions_navigator__objects in: org.jkiss.dbeaver.ui.editors.sql.internal.SQLEditorMessages
+> Start DBeaver UI Editors - SQL [org.jkiss.dbeaver.ui.editors.sql 1.0.117.202310221533]
+> Start GEF Classic Draw2d [org.eclipse.draw2d 3.14.0.202308311129]
+> Start GEF Classic GEF (MVC) [org.eclipse.gef 3.15.0.202308311129]
+> Start DBeaver UI Editors - Data [org.jkiss.dbeaver.ui.editors.data 1.0.117.202310221533]
+> Start DBeaver ERD UI [org.jkiss.dbeaver.erd.ui 3.0.77.202310221533]
+> Start DBeaver ERD Model [org.jkiss.dbeaver.erd.model 1.0.77.202310221533]
+> Start 인터넷 연결 관리 사용자 인터페이스 [org.eclipse.ui.net 1.5.100.v20230726-0617]
+> Start Internet Connection Management [org.eclipse.core.net 1.5.100.v20230630-1232]
+> Start DBeaver Sample Database [org.jkiss.dbeaver.ext.sample.database 1.0.154.202310221533]
+> Start DBeaver Tip of the day [org.jkiss.dbeaver.ext.ui.tipoftheday 1.0.123.202310221533]
+2023-11-26 00:05:02.289 - Open [https://dbeaver.io/product/version.xml]
+2023-11-26 00:05:06.232 - Downloading installation file to /var/folders/6x/w6x2yr_95n1154plylrn4qvc0000gn/T/dbeaver-ce-latest-macos-aarch64.dmg775623778627846631/dbeaver-ce-latest-macos-aarch64.dmg
+2023-11-26 00:05:06.233 - Open [https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg]
+2023-11-26 00:05:09.234 - Canceled by user
+java.lang.InterruptedException
+	at org.jkiss.dbeaver.runtime.WebUtils.downloadRemoteFile(WebUtils.java:181)
+	at org.jkiss.dbeaver.runtime.WebUtils.downloadRemoteFile(WebUtils.java:156)
+	at org.jkiss.dbeaver.ui.app.standalone.update.VersionUpdateDialog$1.run(VersionUpdateDialog.java:275)
+	at org.jkiss.dbeaver.model.runtime.AbstractJob.run(AbstractJob.java:105)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+2023-11-26 00:05:09.273 - DBeaver is stopping
+2023-11-26 00:05:09.273 - Stop instance server
+2023-11-26 00:05:10.274 - DBeaver shutdown completed
