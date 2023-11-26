@@ -35,7 +35,7 @@ public class MyBatisConfig {
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         //sql을 지을 때 필요한 설정들을 넣을 수 있는 객체
         sqlSessionFactoryBean.setDataSource(dataSource());
-        sqlSessionFactoryBean.addMapperLocations(applicationContext.getResources("classpath*/mapper/*.xml")); //resource까지의 경로를 applicationContext가 알고 있음
+        sqlSessionFactoryBean.addMapperLocations(applicationContext.getResources("classpath:/mapper/*.xml")); //resource까지의 경로를 applicationContext가 알고 있음
         sqlSessionFactoryBean.setConfigLocation(applicationContext.getResource("classpath:/config/config.xml"));
 
 
