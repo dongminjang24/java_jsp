@@ -5,19 +5,33 @@
     <title>practice01</title>
 </head>
 <body>
-        <table>
-            <tr>
-                <th>제품명</th>
-                <th>제품가격</th>
-                <th>재고</th>
-                <th>브랜드</th>
-            </tr>
-            <tr th:object="${product}">
-                <td th:text="*{productName}"></td>
-                <td th:text="*{productPrice}"></td>
-                <td th:text="*{productStock}"></td>
-                <td th:text="*{brand}"></td>
-            </tr>
-        </table>
+<table>
+    <tr>
+        <th>제품명</th>
+        <th>제품가격</th>
+        <th>재고</th>
+        <th>브랜드</th>
+        <!--            </tr>-->
+        <!--                <td th:text="*{productName}"></td>-->
+        <!--                <td th:text="*{productPrice}"></td>-->
+        <!--                <td th:text="*{productStock}"></td>-->
+        <!--                <td th:text="*{brand}"></td>-->
+        <!--            </tr>-->
+</table>
+
+<form th:action="@{/ex/practice01}" th:object="${product}"  method="post">
+    <label th:for="productName">제품명 : </label>
+    <input type="text" th:field="*{productName}"/>
+
+    <label th:for="productPrice">제품가격 : </label>
+    <input type="number" th:field="*{productPrice}"/>
+
+    <label th:for="productStock">재고 : </label>
+    <input type="number" th:field="*{productStock}"/>
+
+    <label th:for="brand">브랜드 : </label>
+    <input type="text" th:field="*{brand}"/>
+    <input type="submit" value="저장하기" >
+</form>
 </body>
 </html>

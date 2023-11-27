@@ -1,0 +1,23 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>practice01</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>총점</th>
+        <th>평균</th>
+
+    </tr>
+    <tr th:object="${task}">
+        <td th:text="*{score()}"></td>
+        <td th:text="*{average()}"></td>
+    </tr>
+</table>
+</body>
+</html>

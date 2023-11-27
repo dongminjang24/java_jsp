@@ -3,13 +3,12 @@ package com.example.ex02.controller;
 
 import com.example.ex02.domain.vo.MemberVO;
 import com.example.ex02.domain.vo.ProductVO;
+import com.example.ex02.domain.vo.TaskVO;
+import com.example.ex02.domain.vo.UserVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -61,7 +60,7 @@ public class ExampleController {
 
     @GetMapping("/practice01")
 //    public void practice1(String productName,int productPrice, int productStock,String brand, Model model) {
-    public void practice1(@ModelAttribute("product") ProductVO productVO) {
+    public void practice1(Model model) {
 //        model.addAttribute("productName",productName);
 //        model.addAttribute("productPrice",productPrice);
 //        model.addAttribute("productStock",productStock);
@@ -71,30 +70,56 @@ public class ExampleController {
 //        log.info("productPrice={}",productPrice);
 //        log.info("productStock={}",productStock);
 //        log.info("brand={}",brand);
-        log.info("productName={}",productVO.getProductName());
-        log.info("productPrice={}",productVO.getProductPrice());
-        log.info("productStock={}",productVO.getProductStock());
-        log.info("brand={}",productVO.getBrand());
+
+        model.addAttribute("product", new ProductVO());
+
     }
 
+    @PostMapping("/practice01")
+//    public void practice1(String productName,int productPrice, int productStock,String brand, Model model) {
+    public String practicePost(ProductVO productVO) {
+        return "/ex/practice-result";
+    }
 
 
     @GetMapping("/practice02")
-    public void practice2(@ModelAttribute("product") ProductVO productVO) {
-//        model.addAttribute("productName",productName);
-//        model.addAttribute("productPrice",productPrice);
-//        model.addAttribute("productStock",productStock);
-//        model.addAttribute("brand",brand);
+    public void practice02(@ModelAttribute("task") TaskVO taskVO) {
 
-        log.info("productName={}",productVO.getProductName());
-        log.info("productPrice={}",productVO.getProductPrice());
-        log.info("productStock={}",productVO.getProductStock());
-        log.info("brand={}",productVO.getBrand());
     }
 
+    @PostMapping("/practice02")
+    public String practiceResult(@ModelAttribute("task") TaskVO taskVO) {
+        return "/ex/practice02-result";
+    }
+
+    @GetMapping("/login")
+    public void practice4(@ModelAttribute("user") UserVO userVO) {
 
 
+        log.info("id={}",userVO.getId());
+        log.info("password={}",userVO.getPassword());
+    }
 
+    @PostMapping("/login")
+    public String practice5(@ModelAttribute("user") UserVO userVO) {
+
+        if (userVO.getId().equals("admin") ) {
+            return "redirect:/ex/admin";
+        }
+        if (userVO.getId().equals("user")) {
+            return "redirect:/ex/user";
+        }
+        return "redirect:/ex/login";
+    }
+
+    @GetMapping("/admin")
+    public void practiceAdmin(@ModelAttribute("user") UserVO userVO) {
+
+    }
+    @GetMapping("/user")
+    public void practiceUser(@ModelAttribute("user") UserVO userVO) {
+
+    }
 
 
 
@@ -117,4 +142,6 @@ public class ExampleController {
     //- Login.htmt : 아이디와 비밀번호 입력 페이지 출력
     //- admin.html : 관리자 페이지 출력
     //- user.htmt : 일반 회원 페이지 출
+
+
 }
