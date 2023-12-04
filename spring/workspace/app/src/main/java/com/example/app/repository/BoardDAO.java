@@ -35,7 +35,7 @@ public class BoardDAO {
     public List<BoardVO> findAll(){
         return boardMapper.selectAll();
     };
-}
+
 
 
 }

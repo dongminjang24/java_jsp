@@ -3,7 +3,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.app.mapper.BoardMapper">
     <insert id="insert" >
-        INSERT INTO TBL_BOARD(BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT)  VALUES (SEQ_BOARD.NEXTVAL , #{boardTitle}, #{boardWriter}, #{boardContent})
+        <selectKey keyProperty="boardNumber" order="BEFORE" resultType="long">
+            SELECT SEQ_BOARD.NEXTVAL FROM DUAL /*//전달받은 파라미터에 다시 리턴을 한것*/
+        </selectKey>
+        INSERT INTO TBL_BOARD(BOARD_NUMBER, BOARD_TITLE, BOARD_WRITER, BOARD_CONTENT)  VALUES (#{boardNumber} , #{boardTitle}, #{boardWriter}, #{boardContent})
     </insert>
 
     <update id="update" >

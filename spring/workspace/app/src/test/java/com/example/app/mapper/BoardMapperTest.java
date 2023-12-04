@@ -19,8 +19,9 @@ public class BoardMapperTest {
     @Test
     public void insertTest() {
         BoardVO boardVO = new BoardVO();
-        boardVO.create("새로 작성한 게시글 제목", "장동민", "새로 작성한 게시글 내용");
+        boardVO.create("새로 작성한 게시글 제목2", "장동민2", "새로 작성한 게시글 내용2");
         boardMapper.insert(boardVO);
+        log.info("boardNumber ={}",boardVO.getBoardNumber());
     }
 
     @Test
